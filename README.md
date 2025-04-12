@@ -1,24 +1,39 @@
-# Crypto Data Pipeline
+# 🚀 Crypto KPIs Dashboard
 
-This project fetches cryptocurrency data from the CoinGecko API, stores it in an SQLite database, and allows you to analyze and visualize the data.
+A live cryptocurrency data pipeline and dashboard built with Python, SQLite, and Streamlit — powered by the CoinGecko API.
 
-## Features:
-- Fetch live data from the CoinGecko API.
-- Store data in an SQLite database.
-- Export data to CSV for analysis.
-- Visualize trends and create reports.
+## 📊 Features
+- Pulls top 10 cryptocurrencies using live API
+- Stores & updates data in SQLite
+- Calculates KPIs like:
+  - Top gainer
+  - Highest market cap
+  - Avg price
+  - Total market cap
+  - Top price-to-market cap ratio
+- Interactive visualizations and metrics
+- CSV download option
 
-## How to Use:
-1. Run `crypto_pipeline.py` to fetch and store the data.
-2. Use the dataset in the `crypto_data.db` for analysis.
-3. Optionally, export data to `crypto_data.csv`.
-
-## Technologies Used:
+## 🛠️ Tech Stack
 - Python
-- SQLite
-- Requests
 - Pandas
+- SQLite
+- Matplotlib
+- Streamlit
 
-## Future Improvements:
-- Automate data fetching using a scheduler (e.g., `schedule`).
-- Create a Streamlit dashboard to visualize the data in real-time.
+## 🔍 Example Metrics
+
+| KPI | Value |
+|---|---|
+| Top Gainer | Bitcoin ($83,463) |
+| Avg Price (Top 10) | $XX.XX |
+| Coins Under $1 | 3 |
+
+## 🧼 Screenshot
+![Screenshot of dashboard](screenshot.png)
+
+## 🚀 How to Run
+
+```bash
+pip install streamlit pandas matplotlib
+streamlit run crypto_dashboard.py
